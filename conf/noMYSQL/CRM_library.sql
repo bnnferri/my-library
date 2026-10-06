@@ -1,0 +1,35 @@
+-- aqui um banco de dados que em aula exploro como data warehouse...
+create user 'saas'@'localhost' identified by 'saas';
+create database enterprise;
+grant all privileges on enterprise .* to 'saas'@'localhost';
+flush privileges;
+use enterprise;
+CREATE TABLE MEMBRO (
+	ID INT IDENTITY(1,1) PRIMARY KEY,
+	NOME VARCHAR(50) NOT NULL,
+	MATRICULA VARCHAR(7) NOT NULL,
+	PENDENTE BIT NOT NULL DEFAULT 0
+)
+
+CREATE TABLE LIVRO (
+	ID INT IDENTITY(1,1) PRIMARY KEY,
+	NOME VARCHAR(50) NOT NULL,
+	NOMEAUTOR VARCHAR(100) NOT NULL,
+	DISPONIVEL BIT NOT NULL DEFAULT 0,
+    QUANTIDADE INT NOT NULL
+)
+
+CREATE TABLE EMPRESTIMO (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    created_at DATETIME2 NOT NULL DEFAULT GETDATE(),
+    DataDevolucao DATETIME2 NULL,
+    MEMBRO_ID INT NOT NULL,
+    LIVRO_ID INT NOT NULL,
+
+    CONSTRAINT FK_EMPRESTIMO_MEMBRO
+    FOREIGN KEY (MEMBRO_ID) REFERENCES MEMBRO(ID),
+
+    CONSTRAINT FK_EMPRESTIMO_LIVRO
+    FOREIGN KEY (LIVRO_ID) REFERENCES LIVRO(ID)
+);
+exit;
