@@ -4,7 +4,7 @@
 |------------|----------------------------------------------------------------------------|
 | **Data**   | 10/2026                                                                    |
 | **Status** | Aceito                                                                     |
-| **Autor**  | Melissa Sequeira — [mehsequeiracampos@gmail.com](mehsequeiracampos@gmail.com) ||Brunno Borges Ferri — [brunnoborgesf@gmail.com](brunnoborgesf@gmail.com) ||
+| **Autor**  | Melissa Sequeira — [mehsequeiracampos@gmail.com](mehsequeiracampos@gmail.com) Brunno Borges Ferri — [brunnoborgesf@gmail.com](brunnoborgesf@gmail.com) |
 
 ---
 
